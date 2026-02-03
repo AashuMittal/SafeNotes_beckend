@@ -28,9 +28,9 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage }).single('file');
 
-app.listen(9000, () => {
-    console.log("Server is running on port 9000");
-});
+// app.listen(9000, () => {
+//     console.log("Server is running on port 9000");
+// });
 
 
 app.get('/', (req, res) => {
@@ -54,3 +54,4 @@ app.delete('/delete/:userid', UserController.deleteNote);
 
 
 
+module.exports = app;
